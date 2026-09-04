@@ -40,12 +40,6 @@ export const upcomingSections = [
     summary: "A concise professional summary will be added from verified information.",
   },
   {
-    id: "experience",
-    title: "Experience",
-    summary:
-      "Role history will be added from verified titles, employers, and dates only.",
-  },
-  {
     id: "projects",
     title: "Projects",
     summary:
