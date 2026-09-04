@@ -40,12 +40,6 @@ export const upcomingSections = [
     summary: "A concise professional summary will be added from verified information.",
   },
   {
-    id: "projects",
-    title: "Projects",
-    summary:
-      "Selected work will be described from verified project facts, without confidential details.",
-  },
-  {
     id: "contact",
     title: "Contact",
     summary: "Additional contact options will be added when a public email or profile URL is provided.",
