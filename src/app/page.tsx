@@ -1,11 +1,13 @@
+import { ExperienceSection } from "@/components/experience/ExperienceSection";
 import { Hero } from "@/components/home/Hero";
 import { SectionPlaceholder } from "@/components/home/SectionPlaceholder";
 import { SkillsSection } from "@/components/skills/SkillsSection";
 import { upcomingSections } from "@/data/profile";
 
 export default function Home() {
-  const sectionsBeforeSkills = upcomingSections.filter(
-    (section) => section.id !== "contact",
+  const aboutSection = upcomingSections.find((section) => section.id === "about");
+  const projectsSection = upcomingSections.find(
+    (section) => section.id === "projects",
   );
   const contactSection = upcomingSections.find(
     (section) => section.id === "contact",
@@ -16,14 +18,21 @@ export default function Home() {
       <div id="top">
         <Hero />
       </div>
-      {sectionsBeforeSkills.map((section) => (
+      {aboutSection ? (
         <SectionPlaceholder
-          key={section.id}
-          id={section.id}
-          title={section.title}
-          summary={section.summary}
+          id={aboutSection.id}
+          title={aboutSection.title}
+          summary={aboutSection.summary}
         />
-      ))}
+      ) : null}
+      <ExperienceSection />
+      {projectsSection ? (
+        <SectionPlaceholder
+          id={projectsSection.id}
+          title={projectsSection.title}
+          summary={projectsSection.summary}
+        />
+      ) : null}
       <SkillsSection />
       {contactSection ? (
         <SectionPlaceholder
