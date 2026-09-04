@@ -21,15 +21,16 @@ export function ContactSection() {
           {contact.intro}
         </p>
 
-        <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {contact.channels.map((channel) => (
             <li key={channel.id}>
               <a
                 href={channel.href}
+                aria-label={channel.accessibleName}
                 {...(channel.external
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-                className="block rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--accent)]/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                className="block h-full rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-5 transition-colors hover:border-[var(--accent)]/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
               >
                 <p className="text-xs tracking-[0.16em] text-[var(--accent)] uppercase">
                   {channel.label}

@@ -7,7 +7,10 @@ export const profile = {
   headlineRole: "Technology Lead",
   positioning: "Technology Lead / Full Stack Engineer",
   yearsOfExperienceLabel: "8+ years",
-  mobile: "8885486832",
+  mobile: {
+    display: "+91 88854 83632",
+    href: "tel:+9188854836832",
+  },
   email: "bhaskarkeelu.92@gmail.com",
   links: {
     linkedin: "https://www.linkedin.com/in/bhaskar-keelu-b7a209138",
@@ -70,6 +73,15 @@ export const contact = {
       label: "Email",
       value: profile.email,
       href: `mailto:${profile.email}`,
+      accessibleName: `Email ${profile.name} at ${profile.email}`,
+      external: false,
+    },
+    {
+      id: "phone",
+      label: "Phone",
+      value: profile.mobile.display,
+      href: profile.mobile.href,
+      accessibleName: `Call ${profile.mobile.display}`,
       external: false,
     },
     {
@@ -77,6 +89,7 @@ export const contact = {
       label: "LinkedIn",
       value: "linkedin.com/in/bhaskar-keelu-b7a209138",
       href: profile.links.linkedin,
+      accessibleName: `${profile.name} on LinkedIn`,
       external: true,
     },
     {
@@ -84,6 +97,7 @@ export const contact = {
       label: "GitHub",
       value: "github.com/BhaskarKeelu1008",
       href: profile.links.github,
+      accessibleName: `${profile.name} on GitHub`,
       external: true,
     },
   ],
