@@ -5,8 +5,14 @@
 export const profile = {
   name: "Bhaskar Keelu",
   headlineRole: "Technology Lead",
+  positioning: "Technology Lead / Full Stack Engineer",
   yearsOfExperienceLabel: "8+ years",
   mobile: "8885486832",
+  email: "bhaskarkeelu.92@gmail.com",
+  links: {
+    linkedin: "https://www.linkedin.com/in/bhaskar-keelu-b7a209138",
+    github: "https://github.com/BhaskarKeelu1008",
+  },
   coreTechnologies: [
     "Node.js",
     "JavaScript",
@@ -33,18 +39,55 @@ export const navigation = [
   { href: "#contact", label: "Contact" },
 ] as const;
 
-export const upcomingSections = [
-  {
-    id: "about",
-    title: "About",
-    summary: "A concise professional summary will be added from verified information.",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    summary: "Additional contact options will be added when a public email or profile URL is provided.",
-  },
-] as const;
+export const about = {
+  title: "About Me",
+  paragraphs: [
+    `I am a ${profile.positioning} with ${profile.yearsOfExperienceLabel} of experience building and leading software solutions. My work covers backend engineering, full-stack development, AWS and cloud architecture, enterprise platforms, API development, and technical leadership.`,
+    "I have contributed to large-scale insurance technology platforms, including Renewal Vault and its AWS-based policy renewal workflows, and the iCare platform — specifically agent onboarding and franchise recruitment workflows. I also build backend and API services with Node.js and cloud-based systems on AWS.",
+    "My leadership practice includes technical leadership, sprint planning, code reviews, testing, observability, quality, security, and technical debt management, along with AI-enabled coding and modern engineering practices.",
+  ],
+  strengths: [
+    "Full Stack Development",
+    "Node.js",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "AWS",
+    "REST APIs",
+    "Microservices Architecture",
+    "Enterprise Platforms",
+    "Technical Leadership",
+  ],
+} as const;
+
+export const contact = {
+  title: "Let's Connect",
+  intro:
+    "I am open to conversations about technology leadership, full-stack engineering, and enterprise platform work.",
+  channels: [
+    {
+      id: "email",
+      label: "Email",
+      value: profile.email,
+      href: `mailto:${profile.email}`,
+      external: false,
+    },
+    {
+      id: "linkedin",
+      label: "LinkedIn",
+      value: "linkedin.com/in/bhaskar-keelu-b7a209138",
+      href: profile.links.linkedin,
+      external: true,
+    },
+    {
+      id: "github",
+      label: "GitHub",
+      value: "github.com/BhaskarKeelu1008",
+      href: profile.links.github,
+      external: true,
+    },
+  ],
+} as const;
 
 export type SkillEmphasis = "primary" | "secondary";
 

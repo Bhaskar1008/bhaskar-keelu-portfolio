@@ -11,7 +11,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
         <a
           href="#top"
-          className="text-sm font-medium tracking-[0.18em] text-[var(--foreground)] uppercase"
+          className="text-sm font-medium tracking-[0.18em] text-[var(--foreground)] uppercase focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
         >
           {profile.name}
         </a>
@@ -21,7 +21,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
+              className="text-sm text-[var(--muted)] transition-colors hover:text-[var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
             >
               {item.label}
             </a>
@@ -50,7 +50,7 @@ export function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block py-1 text-sm text-[var(--muted)]"
+                  className="block py-1 text-sm text-[var(--muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
